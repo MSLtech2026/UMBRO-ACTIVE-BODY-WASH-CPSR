@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPSR - Umbro Inspire Body Wash</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #43B296;
+            --primary-dark: #2E8B72;
+            --primary-light: #5CC4A8;
+            --black: #212121;
+            --dark-gray: #424242;
+            --medium-gray: #757575;
+            --light-gray: #F5F5F5;
+            --border-gray: #E0E0E0;
+            --white: #FFFFFF;
+            --pass-green: #2E7D32;
+            --pass-green-bg: #E8F5E9;
+            --warning-amber: #FF9800;
+            --warning-amber-bg: #FFF3E0;
+            --fail-red: #C62828;
+            --fail-red-bg: #FFEBEE;
+            --check-green: #2E7D32;
+            --check-bg: #E8F5E9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 9pt;
+            color: var(--black);
+            background: #EEEEEE;
+            line-height: 1.5;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            background: var(--white);
+            margin: 10mm auto;
+            padding: 15mm 18mm;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+            page-break-after: always;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media print {
+            body { background: none; }
+            .page {
+                margin: 0;
+                box-shadow: none;
+                page-break-after: always;
+            }
+        }
+
+        /* ── Cover page ── */
+        .cover-page {
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .cover-top-bar {
+            background: var(--primary-blue);
+            height: 12mm;
+            width: 100%;
+        }
+
+        .cover-body {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 14mm 18mm 10mm;
+        }
+
+        .cover-regulation-badge {
+            display: inline-block;
+            background: var(--light-gray);
+            border-left: 4px solid var(--primary-blue);
+            padding: 5px 12px;
+            font-size: 7.5pt;
+            color: var(--medium-gray);
+            margin-bottom: 14mm;
+            letter-spacing: 0.3px;
+        }
+
+        .cover-product-block {
+            margin-bottom: 10mm;
+        }
+
+        .cover-label {
+            font-size: 7.5pt;
+            font-weight: 600;
+            color: var(--primary-blue);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .cover-title {
+            font-size: 26pt;
+            font-weight: 700;
+            color: var(--black);
+            line-height: 1.15;
+            margin-bottom: 3mm;
+        }
+
+        .cover-subtitle {
+            font-size: 11pt;
+            font-weight: 300;
+            color: var(--medium-gray);
+            letter-spacing: 0.5px;
+        }
+
+        .cover-divider {
+            width: 60mm;
+            height: 3px;
+            background: var(--primary-blue);
+            margin: 8mm 0;
+        }
+
+        .cover-meta-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6mm 10mm;
+            margin-bottom: 10mm;
+        }
+
+        .cover-meta-item {}
+
+        .cover-meta-label {
+            font-size: 7pt;
+            font-weight: 600;
+            color: var(--medium-gray);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 2px;
+        }
+
+        .cover-meta-value {
+            font-size: 9pt;
+            font-weight: 600;
+            color: var(--dark-gray);
+        }
+
+        .cover-status-row {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 10mm;
+            flex-wrap: wrap;
+        }
+
+        .cover-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 10px;
+            border-radius: 3px;
+            font-size: 7.5pt;
+            font-weight: 600;
+        }
+
+        .cover-badge.safe {
+            background: var(--pass-green-bg);
+            color: var(--pass-green);
+            border: 1px solid #A5D6A7;
+        }
+
+        .cover-badge.compliant {
+            background: #E3F2FD;
+            color: #1565C0;
+            border: 1px solid #90CAF9;
+        }
+
+        .cover-badge.ifra {
+            background: var(--warning-amber-bg);
+            color: #E65100;
+            border: 1px solid #FFCC80;
+        }
+
+        .cover-spacer { flex: 1; }
+
+        .cover-bottom-block {
+            border-top: 2px solid var(--border-gray);
+            padding-top: 7mm;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: end;
+            gap: 10mm;
+        }
+
+        .cover-bottom-left {}
+
+        .cover-doc-ref {
+            font-size: 7.5pt;
+            color: var(--medium-gray);
+            margin-bottom: 2px;
+        }
+
+        .cover-bottom-bar {
+            background: var(--primary-blue);
+            height: 8mm;
+            width: 100%;
+            margin-top: 0;
+        }
+
+        .cover-assessor-box {
+            background: var(--light-gray);
+            border: 1px solid var(--border-gray);
+            border-radius: 4px;
+            padding: 8px 12px;
+            text-align: right;
+        }
+
+        .cover-assessor-label {
+            font-size: 6.5pt;
+            color: var(--medium-gray);
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            margin-bottom: 3px;
+        }
+
+        .cover-assessor-name {
+            font-size: 8.5pt;
+            font-weight: 700;
+            color: var(--dark-gray);
+        }
+
+        .cover-assessor-cred {
+            font-size: 7pt;
+            color: var(--medium-gray);
+            margin-top: 2px;
+        }
+
+        .cover-page-footer {
+            font-size: 7pt;
+            color: var(--medium-gray);
+            text-align: center;
+            padding: 4mm 18mm 5mm;
+            border-top: 1px solid var(--border-gray);
+        }
+    </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     COVER PAGE
+═══════════════════════════════════════════════════ -->
+<div class="page cover-page">
+    <div class="cover-top-bar"></div>
+
+    <div class="cover-body">
+        <div class="cover-regulation-badge">
+            EU Cosmetics Regulation (EC) No 1223/2009 &nbsp;|&nbsp; Article 10(1) &nbsp;|&nbsp; SCCS Notes of Guidance, 11th Revision (SCCS/1628/21)
+        </div>
+
+        <div class="cover-product-block">
+            <div class="cover-label">Cosmetic Product Safety Report</div>
+            <div class="cover-title">Umbro Inspire<br>Body Wash</div>
+            <div class="cover-subtitle">Rinse-Off Cleansing Gel &nbsp;·&nbsp; 150 ml</div>
+        </div>
+
+        <div class="cover-divider"></div>
+
+        <div class="cover-meta-grid">
+            <div class="cover-meta-item">
+                <div class="cover-meta-label">Product Reference</div>
+                <div class="cover-meta-value">Umbro Body Wash – Inspire</div>
+            </div>
+            <div class="cover-meta-item">
+                <div class="cover-meta-label">Pack Size</div>
+                <div class="cover-meta-value">150 ml squeeze tube</div>
+            </div>
+            <div class="cover-meta-item">
+                <div class="cover-meta-label">Manufacturer</div>
+                <div class="cover-meta-value">Stella Indusstries Limited<br>
+                    <span style="font-weight:400;font-size:8pt;color:var(--medium-gray)">Gurugram, Haryana, India</span>
+                </div>
+            </div>
+            <div class="cover-meta-item">
+                <div class="cover-meta-label">Responsible Person</div>
+                <div class="cover-meta-value">FOMG International Limited<br>
+                    <span style="font-weight:400;font-size:8pt;color:var(--medium-gray)">EU/UK Market</span>
+                </div>
+            </div>
+            <div class="cover-meta-item">
+                <div class="cover-meta-label">CPSR Issue Date</div>
+                <div class="cover-meta-value">April 2026</div>
+            </div>
+            <div class="cover-meta-item">
+                <div class="cover-meta-label">Formulation Date</div>
+                <div class="cover-meta-value">10 October 2025</div>
+            </div>
+        </div>
+
+        <div class="cover-status-row">
+            <span class="cover-badge safe">&#10003;&nbsp; Safe for Intended Use</span>
+            <span class="cover-badge compliant">&#10003;&nbsp; EU Reg. 1223/2009 Compliant</span>
+            <span class="cover-badge ifra">&#10003;&nbsp; IFRA 51st Amendment Compliant</span>
+            <span class="cover-badge compliant">&#10003;&nbsp; ISO 22716 GMP</span>
+        </div>
+
+        <div class="cover-spacer"></div>
+
+        <div class="cover-bottom-block">
+            <div class="cover-bottom-left">
+                <div class="cover-doc-ref">Document reference: CPSR-UMBRO-INSPIRE-2026-001</div>
+                <div class="cover-doc-ref">This report has been prepared in accordance with Annex I of Regulation (EC) No 1223/2009 and the SCCS Notes of Guidance for the Testing of Cosmetic Ingredients and their Safety Evaluation, 11th Revision (SCCS/1628/21).</div>
+            </div>
+            <div class="cover-assessor-box">
+                <div class="cover-assessor-label">Prepared by</div>
+                <div class="cover-assessor-name">Qualified Safety Assessor</div>
+                <div class="cover-assessor-cred">B.Sc. (Hons) Chemistry &nbsp;|&nbsp; EU Cosmetics Regulation Specialist</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cover-page-footer">
+        CONFIDENTIAL &nbsp;·&nbsp; This document contains commercially sensitive information. Not for distribution without authorisation.
+    </div>
+
+    <div class="cover-bottom-bar"></div>
+</div>
+
+</body>
+</html>
