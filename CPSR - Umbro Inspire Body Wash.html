@@ -295,6 +295,79 @@
         .mos-review { color: var(--warning-amber); font-weight: 700; }
         .mos-na     { color: var(--medium-gray); }
 
+        /* ── Composition table ── */
+        .comp-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 7.5pt;
+            margin-bottom: 4mm;
+        }
+
+        .comp-table thead th {
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 5px 6px;
+            text-align: left;
+            font-weight: 700;
+            font-size: 7pt;
+            letter-spacing: 0.3px;
+        }
+
+        .comp-table thead th.center { text-align: center; }
+
+        .comp-table tbody tr:nth-child(even) { background: var(--light-gray); }
+        .comp-table tbody tr:hover { background: #E0F2EF; }
+
+        .comp-table td {
+            padding: 4px 6px;
+            border-bottom: 1px solid var(--border-gray);
+            vertical-align: middle;
+        }
+
+        .comp-table td.center { text-align: center; }
+        .comp-table td.num { text-align: right; font-variant-numeric: tabular-nums; }
+
+        .func-tag {
+            display: inline-block;
+            background: #E8F5E9;
+            color: #2E7D32;
+            border-radius: 2px;
+            font-size: 6.5pt;
+            font-weight: 600;
+            padding: 1px 5px;
+            margin: 1px 1px;
+        }
+
+        .func-tag.surf { background: #E3F2FD; color: #1565C0; }
+        .func-tag.pres { background: var(--warning-amber-bg); color: #E65100; }
+        .func-tag.emol { background: #F3E5F5; color: #6A1B9A; }
+        .comp-table tfoot td {
+            font-size: 7pt;
+            color: var(--medium-gray);
+            padding: 4px 6px;
+            font-style: italic;
+        }
+
+        /* ── Allergen table ── */
+        .allergen-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 8pt;
+            margin-bottom: 4mm;
+        }
+        .allergen-table thead th {
+            background: var(--primary-dark);
+            color: var(--white);
+            padding: 5px 8px;
+            text-align: left;
+            font-size: 7.5pt;
+        }
+        .allergen-table tbody td {
+            padding: 4px 8px;
+            border-bottom: 1px solid var(--border-gray);
+        }
+        .allergen-table tbody tr:nth-child(even) { background: var(--light-gray); }
+
         /* ── Evidence tags ── */
         .evidence-tag {
             display: inline-block;
@@ -823,6 +896,307 @@
     <div class="page-footer">
         <span>Umbro Inspire Body Wash &nbsp;|&nbsp; CPSR-UMBRO-INSPIRE-2026-001</span>
         <span>Page 5</span>
+        <span>CONFIDENTIAL</span>
+    </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════
+     PAGE 6 — PART A, SECTION 1: COMPOSITION TABLE
+═══════════════════════════════════════════════════ -->
+<div class="page">
+    <div class="page-header">
+        <span class="page-header-title">Umbro Inspire Body Wash &nbsp;|&nbsp; Part A — Section 1: Composition</span>
+        <span class="page-header-doc">CPSR-UMBRO-INSPIRE-2026-001</span>
+    </div>
+
+    <div class="part-header">
+        <div class="part-header-label">Part A — Section 1</div>
+        <div class="part-header-title">Quantitative and Qualitative Composition</div>
+    </div>
+
+    <div class="method-box" style="margin-bottom:4mm;">
+        <strong>Exposure model (SCCS/1628/21 — Rinse-off body wash, Table 3-2):</strong>
+        Daily applied amount = <strong>24 g</strong> &nbsp;·&nbsp; Retention factor (Rf) = <strong>0.01</strong> &nbsp;·&nbsp; Body weight = <strong>60 kg</strong><br>
+        <strong>A<sub>i</sub></strong> = C<sub>i</sub>(%) &times; 0.04 mg/kg bw/day &nbsp;&nbsp;
+        <strong>SED</strong> = A<sub>i</sub> &times; DAp (fraction) &nbsp;&nbsp;
+        <strong>MoS</strong> = NOAEL / SED &nbsp;·&nbsp; Acceptance threshold: MoS &ge; 100
+    </div>
+
+    <table class="comp-table">
+        <thead>
+            <tr>
+                <th style="width:4mm;">#</th>
+                <th style="width:36mm;">INCI Name</th>
+                <th style="width:18mm;">CAS No.</th>
+                <th class="center" style="width:9mm;">Conc. (%)</th>
+                <th style="width:22mm;">Function</th>
+                <th class="center" style="width:10mm;">DAp (%)</th>
+                <th class="center" style="width:14mm;">A<sub>i</sub><br>(mg/kg/d)</th>
+                <th class="center" style="width:14mm;">SED<br>(mg/kg/d)</th>
+                <th class="center" style="width:16mm;">NOAEL<br>(mg/kg/d)</th>
+                <th class="center" style="width:10mm;">MoS</th>
+                <th class="center" style="width:10mm;">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- 1. Water -->
+            <tr>
+                <td>1</td>
+                <td><strong>Aqua</strong> (Purified Water)</td>
+                <td>7732-18-5</td>
+                <td class="center">69.90</td>
+                <td><span class="func-tag">Solvent</span></td>
+                <td class="center">N/A</td>
+                <td class="num">—</td>
+                <td class="num">—</td>
+                <td class="num">—</td>
+                <td class="center mos-na">N/A</td>
+                <td class="center"><span class="badge badge-na">N/A</span></td>
+            </tr>
+            <!-- 2. SLES -->
+            <tr>
+                <td>2</td>
+                <td><strong>Sodium Laureth Sulfate</strong></td>
+                <td>68585-34-2</td>
+                <td class="center">15.00</td>
+                <td><span class="func-tag surf">Surfactant</span> <span class="func-tag surf">Cleansing</span></td>
+                <td class="center">0.1 <sup>[a]</sup></td>
+                <td class="num">0.6000</td>
+                <td class="num">0.000600</td>
+                <td class="num">1,000</td>
+                <td class="center mos-safe">1,666,667</td>
+                <td class="center"><span class="badge badge-pass">SAFE</span></td>
+            </tr>
+            <!-- 3. CAPB -->
+            <tr>
+                <td>3</td>
+                <td><strong>Cocamidopropyl Betaine</strong></td>
+                <td>61789-40-0</td>
+                <td class="center">5.00</td>
+                <td><span class="func-tag surf">Surfactant</span> <span class="func-tag surf">Foam booster</span></td>
+                <td class="center">0.1 <sup>[a]</sup></td>
+                <td class="num">0.2000</td>
+                <td class="num">0.000200</td>
+                <td class="num">1,000</td>
+                <td class="center mos-safe">5,000,000</td>
+                <td class="center"><span class="badge badge-pass">SAFE</span></td>
+            </tr>
+            <!-- 4. Glycerin -->
+            <tr>
+                <td>4</td>
+                <td><strong>Glycerin</strong></td>
+                <td>56-81-5</td>
+                <td class="center">3.00</td>
+                <td><span class="func-tag emol">Humectant</span> <span class="func-tag emol">Moisturiser</span></td>
+                <td class="center">1.0 <sup>[b]</sup></td>
+                <td class="num">0.1200</td>
+                <td class="num">0.001200</td>
+                <td class="num">8,000</td>
+                <td class="center mos-safe">6,666,667</td>
+                <td class="center"><span class="badge badge-pass">SAFE</span></td>
+            </tr>
+            <!-- 5. NaCl -->
+            <tr>
+                <td>5</td>
+                <td><strong>Sodium Chloride</strong></td>
+                <td>7647-14-5</td>
+                <td class="center">2.00</td>
+                <td><span class="func-tag">Viscosity modifier</span></td>
+                <td class="center">0.1 <sup>[a]</sup></td>
+                <td class="num">0.0800</td>
+                <td class="num">0.000080</td>
+                <td class="num">3,000</td>
+                <td class="center mos-safe">37,500,000</td>
+                <td class="center"><span class="badge badge-pass">SAFE</span></td>
+            </tr>
+            <!-- 6. Cocamide MEA -->
+            <tr>
+                <td>6</td>
+                <td><strong>Cocamide MEA</strong></td>
+                <td>68140-00-1</td>
+                <td class="center">1.50</td>
+                <td><span class="func-tag surf">Foam stabiliser</span> <span class="func-tag surf">Thickener</span></td>
+                <td class="center">0.1 <sup>[a]</sup></td>
+                <td class="num">0.0600</td>
+                <td class="num">0.000060</td>
+                <td class="num">315</td>
+                <td class="center mos-safe">5,250,000</td>
+                <td class="center"><span class="badge badge-pass">SAFE</span></td>
+            </tr>
+            <!-- 7. Fragrance -->
+            <tr>
+                <td>7</td>
+                <td><strong>Parfum</strong> (DOLCE SA3 — SAS Attractive Scent)</td>
+                <td>Mixture</td>
+                <td class="center">1.50</td>
+                <td><span class="func-tag emol">Fragrance</span></td>
+                <td class="center">100 <sup>[c]</sup></td>
+                <td class="num">0.0600</td>
+                <td class="num">0.060000</td>
+                <td class="num">500</td>
+                <td class="center mos-safe">8,333</td>
+                <td class="center"><span class="badge badge-pass">SAFE</span></td>
+            </tr>
+            <!-- 8. Propylene Glycol -->
+            <tr>
+                <td>8</td>
+                <td><strong>Propylene Glycol</strong></td>
+                <td>57-55-6</td>
+                <td class="center">1.00</td>
+                <td><span class="func-tag emol">Humectant</span> <span class="func-tag">Solvent</span></td>
+                <td class="center">4.0 <sup>[b]</sup></td>
+                <td class="num">0.0400</td>
+                <td class="num">0.001600</td>
+                <td class="num">3,000</td>
+                <td class="center mos-safe">1,875,000</td>
+                <td class="center"><span class="badge badge-pass">SAFE</span></td>
+            </tr>
+            <!-- 9. Phenoxyethanol -->
+            <tr>
+                <td>9</td>
+                <td><strong>Phenoxyethanol</strong></td>
+                <td>122-99-6</td>
+                <td class="center">0.90</td>
+                <td><span class="func-tag pres">Preservative</span></td>
+                <td class="center">18.0 <sup>[d]</sup></td>
+                <td class="num">0.0360</td>
+                <td class="num">0.006480</td>
+                <td class="num">144</td>
+                <td class="center mos-safe">22,222</td>
+                <td class="center"><span class="badge badge-pass">SAFE</span></td>
+            </tr>
+            <!-- 10. Ethylhexyl Glycerin -->
+            <tr>
+                <td>10</td>
+                <td><strong>Ethylhexylglycerin</strong></td>
+                <td>70445-33-9</td>
+                <td class="center">0.10</td>
+                <td><span class="func-tag pres">Preservative</span> <span class="func-tag emol">Skin conditioner</span></td>
+                <td class="center">18.0 <sup>[d]</sup></td>
+                <td class="num">0.0040</td>
+                <td class="num">0.000720</td>
+                <td class="num">133</td>
+                <td class="center mos-safe">184,722</td>
+                <td class="center"><span class="badge badge-pass">SAFE</span></td>
+            </tr>
+            <!-- 11. Disodium EDTA -->
+            <tr>
+                <td>11</td>
+                <td><strong>Disodium EDTA</strong></td>
+                <td>139-33-3</td>
+                <td class="center">0.10</td>
+                <td><span class="func-tag">Chelating agent</span></td>
+                <td class="center">0.5 <sup>[b]</sup></td>
+                <td class="num">0.0040</td>
+                <td class="num">0.000020</td>
+                <td class="num">1,000</td>
+                <td class="center mos-safe">50,000,000</td>
+                <td class="center"><span class="badge badge-pass">SAFE</span></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr><td colspan="11">Total: 100.00% &nbsp;|&nbsp; All concentrations are w/w% in finished product. CAS numbers sourced from CosIng / ECHA databases.</td></tr>
+        </tfoot>
+    </table>
+
+    <div style="font-size:7pt;color:var(--medium-gray);line-height:1.7;margin-bottom:3mm;">
+        <strong>DAp footnotes:</strong>
+        <sup>[a]</sup> 0.1% — high MW (&gt;500 Da) / ionic; negligible dermal penetration (SCCS/1628/21 default for large surfactant molecules). &nbsp;
+        <sup>[b]</sup> Literature-derived conservative estimate for small polar molecules (glycerin 1%; propylene glycol 4%; EDTA 0.5%). &nbsp;
+        <sup>[c]</sup> 100% — conservative worst-case applied to total fragrance mixture per SCCS guidance where individual component data not fully specified. &nbsp;
+        <sup>[d]</sup> 18% — based on in vitro human skin penetration data for phenoxyethanol / ethylhexylglycerin (SCCS/1525/13; CIR 2021 amended report).
+    </div>
+
+    <div class="page-footer">
+        <span>Umbro Inspire Body Wash &nbsp;|&nbsp; CPSR-UMBRO-INSPIRE-2026-001</span>
+        <span>Page 6</span>
+        <span>CONFIDENTIAL</span>
+    </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════
+     PAGE 7 — ALLERGEN DECLARATION + ANNEX III CHECK
+═══════════════════════════════════════════════════ -->
+<div class="page">
+    <div class="page-header">
+        <span class="page-header-title">Umbro Inspire Body Wash &nbsp;|&nbsp; Part A — Section 1 (continued)</span>
+        <span class="page-header-doc">CPSR-UMBRO-INSPIRE-2026-001</span>
+    </div>
+
+    <div class="section-title">Fragrance Allergen Declaration — EU Regulation 2023/1545</div>
+    <p style="font-size:8.5pt;margin-bottom:4mm;">
+        Regulation (EU) 2023/1545 amends Annex III of Regulation (EC) No 1223/2009, extending mandatory labelling of fragrance allergens. For <strong>rinse-off products</strong>, individual fragrance allergens must be declared on-label when present at or above <strong>0.01%</strong> in the finished product. The fragrance DOLCE SA3 (SAS Attractive Scent, France; ref. RC0000107146) was assessed for its allergen content at the 1.5% use level.
+    </p>
+
+    <table class="allergen-table">
+        <thead>
+            <tr>
+                <th>Allergen (INCI)</th>
+                <th>% in Fragrance</th>
+                <th>% in Finished Product<br><small>(× 0.015)</small></th>
+                <th>Rinse-off Threshold (0.01%)</th>
+                <th>Declaration Required?</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Acetyl Cedrene</strong></td>
+                <td>1.1964%</td>
+                <td><strong>0.01795%</strong></td>
+                <td>0.01%</td>
+                <td><span class="badge badge-warn">YES — declare</span></td>
+            </tr>
+            <tr>
+                <td>All other listed EU 2023/1545 allergens</td>
+                <td>&lt;0.667% each</td>
+                <td>&lt;0.010% each</td>
+                <td>0.01%</td>
+                <td><span class="badge badge-na">No — below threshold</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="warning-box">
+        <strong>Labelling requirement:</strong> "Acetyl Cedrene" must appear in the ingredient list on the product label (or accompanying leaflet if label space is insufficient) in accordance with EU 2023/1545 and Article 19(1)(g) of Regulation (EC) No 1223/2009. This has been confirmed in the INCI declaration supplied by the manufacturer (Stella Indusstries Limited, dated 10 Oct 2025), where "Acetyl Cedrene" is explicitly listed. An EUH208 statement — <em>"Contains Acetyl Cedrene. May produce an allergic reaction."</em> — is additionally required per the CLP Regulation, as indicated in the DOLCE SA3 SDS (Skin Sens. 1, H317).
+    </div>
+
+    <div class="section-title" style="margin-top:6mm;">Annex II / Annex III Compliance Check</div>
+    <p style="font-size:8.5pt;margin-bottom:4mm;">
+        All ingredients have been cross-referenced against the current consolidated version of Regulation (EC) No 1223/2009 Annexes:
+    </p>
+    <dl class="info-grid">
+        <dt>Annex II (Prohibited substances)</dt>
+        <dd>No ingredients are listed in Annex II. None detected in the formulation. &#10003;</dd>
+        <dt>Annex III (Restricted substances)</dt>
+        <dd>Phenoxyethanol: permitted preservative (Annex V entry 29) at maximum 1.0% — used at 0.9%. Compliant. &#10003;</dd>
+        <dt>Annex IV (Permitted colorants)</dt>
+        <dd>No colorants used in this formulation. &#10003;</dd>
+        <dt>Annex V (Permitted preservatives)</dt>
+        <dd>Phenoxyethanol (entry 29, max 1.0%) at 0.9% — compliant. Ethylhexylglycerin is not an Annex V preservative but functions as a preservation booster; assessed as a cosmetic ingredient. &#10003;</dd>
+        <dt>Annex VI (Permitted UV filters)</dt>
+        <dd>No UV filters used in this formulation. &#10003;</dd>
+    </dl>
+
+    <div class="section-title" style="margin-top:5mm;">IFRA 51st Amendment Compliance — DOLCE SA3</div>
+    <dl class="info-grid">
+        <dt>Fragrance supplier</dt><dd>SAS Attractive Scent, France</dd>
+        <dt>Fragrance reference</dt><dd>DOLCE SA3 &nbsp;|&nbsp; RC0000107146</dd>
+        <dt>IFRA standard</dt><dd>51st Amendment (Certificate ref: DOLCE IFRA51 2509)</dd>
+        <dt>IFRA category</dt><dd>Class 9 — Body wash, shampoo, shower gel (rinse-off leave-on combination)</dd>
+        <dt>IFRA Class 9 limit</dt><dd>50.9709% in finished product</dd>
+        <dt>Actual use level</dt><dd>1.50% in finished product</dd>
+        <td>Safety factor</td><dd><strong>34×</strong> below IFRA limit &nbsp;<span class="badge badge-pass">COMPLIANT</span></dd>
+    </dl>
+
+    <div class="conclusion-box">
+        <strong>Section 1 Conclusion:</strong> All 11 ingredients are verified as permitted for use in cosmetic products placed on the EU/UK market. All MoS values exceed the minimum threshold of 100. The fragrance allergen Acetyl Cedrene is correctly declared on the INCI label. The preservative system and fragrance are compliant with applicable Annexes and IFRA standards.
+    </div>
+
+    <div class="page-footer">
+        <span>Umbro Inspire Body Wash &nbsp;|&nbsp; CPSR-UMBRO-INSPIRE-2026-001</span>
+        <span>Page 7</span>
         <span>CONFIDENTIAL</span>
     </div>
 </div>
